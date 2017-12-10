@@ -50,6 +50,8 @@ class Router
 
     public static function dispatch($url)
     {
+        $url = self::removeQueryString($url);
+        d($url);
         if(self::matchRoute($url))
         {
 //            self::$route['controller'] = self::upperCamelCase(self::$route['controller']);
@@ -88,5 +90,19 @@ class Router
         return lcfirst(self::upperCamelCase($name));
     }
 
-
+    protected static function removeQueryString($url)
+    {
+        if($url)
+        {
+            $params = explode('&',$url,2);
+            if(!strpos($params[0],'='))
+            {
+                return rtrim($params[0],'/');
+            }
+            else
+            {
+                return '';
+            }
+        }
+    }
 }
