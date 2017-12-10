@@ -40,7 +40,8 @@ class Router
                     $route['action'] = 'index';
                 }
                 self::$route = $route;
-                self::$route['controller'] = ucfirst($route['controller']) . 'Controller';
+                self::$route['action'] = self::lowerCamelCase($route['action']);
+                self::$route['controller'] = self::upperCamelCase(ucfirst($route['controller']) . 'Controller');
                 return true;
             }
         }
@@ -51,11 +52,13 @@ class Router
     {
         if(self::matchRoute($url))
         {
-            $controller = 'app\controllers\\' . self::upperCamelCase(self::$route['controller']);
+//            self::$route['controller'] = self::upperCamelCase(self::$route['controller']);
+            $controller = 'app\controllers\\' . self::$route['controller'];
             if(class_exists($controller))
             {
+//                self::$route['action'] = self::lowerCamelCase(self::$route['action']);
+                $action = self::$route['action'] . 'Action';
                 $controllerObject = new $controller(self::$route);
-                $action = self::lowerCamelCase(self::$route['action']) . 'Action';
                 if(method_exists($controllerObject,$action))
                 {
                     $controllerObject->$action();

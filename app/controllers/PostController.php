@@ -15,4 +15,10 @@ class PostController extends Controller
         echo __METHOD__;
         d($this->route);
     }
+
+    public function getPostsAction()
+    {
+        echo __METHOD__;
+        d($this->route);
+    }
 }
