@@ -1,5 +1,7 @@
 <?php
 
+namespace vendorcore\core;
+
 class Router
 {
     protected static $routes = [];
@@ -49,10 +51,10 @@ class Router
     {
         if(self::matchRoute($url))
         {
-            $controller = self::upperCamelCase(self::$route['controller']);
+            $controller = 'app\controllers\\' . self::upperCamelCase(self::$route['controller']);
             if(class_exists($controller))
             {
-                $controllerObject = new $controller;
+                $controllerObject = new $controller(self::$route);
                 $action = self::lowerCamelCase(self::$route['action']) . 'Action';
                 if(method_exists($controllerObject,$action))
                 {
