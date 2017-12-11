@@ -1,11 +1,16 @@
 <?php
 namespace app\controllers;
 
-class MainController
+class MainController extends AppController
 {
     public function indexAction()
     {
-        echo __METHOD__;
+        $name = 'ArtKol';
+        $car = [
+            'mark' => 'Toyota',
+            'model' => 'Mark II'
+        ];
+        $this->with(compact('name','car'));
     }
 
 }

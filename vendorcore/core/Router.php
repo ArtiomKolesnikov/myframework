@@ -51,7 +51,6 @@ class Router
     public static function dispatch($url)
     {
         $url = self::removeQueryString($url);
-        d($url);
         if(self::matchRoute($url))
         {
 //            self::$route['controller'] = self::upperCamelCase(self::$route['controller']);
@@ -64,6 +63,7 @@ class Router
                 if(method_exists($controllerObject,$action))
                 {
                     $controllerObject->$action();
+                    $controllerObject->getView();
                 }
                 else
                 {

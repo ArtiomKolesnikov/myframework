@@ -32,8 +32,8 @@ if(isset($_FILES['file']))
 
 }
 ?>
-
+<a href="/" class="btn btn-primary">ГЛАВНАЯ</a>
 <form action="download" enctype="multipart/form-data" method="post">
-    <input type="file" name="file">
-    <input type="submit" value="download">
+    <input type="file" name="file" >
+    <input type="submit" value="download"  class="btn btn-primary">
 </form>

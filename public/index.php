@@ -6,6 +6,7 @@ define('WWW',__DIR__);
 define('CORE', dirname(__DIR__) . '/vendorcore/core');
 define('ROOT',dirname(__DIR__));
 define('APP',dirname(__DIR__) . '/app');
+define('LAYOUT','default');
 
 require '../vendorcore/libs/functions.php';
 

@@ -1,24 +1,19 @@
 <?php
 namespace app\controllers;
 
-use vendorcore\core\base\Controller;
-
-class PostController extends Controller
+class PostController extends AppController
 {
     public function indexAction()
     {
-        echo __METHOD__;
+        $this->layout = false;
+        echo 'порсто index post без шаблона';
     }
 
     public function addAction()
     {
-        echo __METHOD__;
-        d($this->route);
     }
 
     public function getPostsAction()
     {
-        echo __METHOD__;
-        d($this->route);
     }
 }
