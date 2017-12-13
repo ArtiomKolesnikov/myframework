@@ -4,20 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
+    "hash": "07816e75c9c3a0dff0ec151a9c40357d",
     "content-hash": "1188e30b4a92e212f0300ff21d7dd3df",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.45.3",
+            "version": "3.46.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "d0abb0b1194fa64973b135191f56df991bc5787c"
+                "reference": "097abac2676b99ed38af986c3d8d8f3528a5788b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/d0abb0b1194fa64973b135191f56df991bc5787c",
-                "reference": "d0abb0b1194fa64973b135191f56df991bc5787c",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/097abac2676b99ed38af986c3d8d8f3528a5788b",
+                "reference": "097abac2676b99ed38af986c3d8d8f3528a5788b",
                 "shasum": ""
             },
             "require": {
@@ -84,7 +85,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2017-12-08T21:36:50+00:00"
+            "time": "2017-12-11 22:12:17"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -149,7 +150,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2017-06-22T18:50:49+00:00"
+            "time": "2017-06-22 18:50:49"
         },
         {
             "name": "guzzlehttp/promises",
@@ -200,7 +201,7 @@
             "keywords": [
                 "promise"
             ],
-            "time": "2016-12-20T10:07:11+00:00"
+            "time": "2016-12-20 10:07:11"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -265,7 +266,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2017-03-20T17:10:46+00:00"
+            "time": "2017-03-20 17:10:46"
         },
         {
             "name": "mtdowling/jmespath.php",
@@ -320,7 +321,7 @@
                 "json",
                 "jsonpath"
             ],
-            "time": "2016-12-03T22:08:25+00:00"
+            "time": "2016-12-03 22:08:25"
         },
         {
             "name": "psr/http-message",
@@ -370,7 +371,7 @@
                 "request",
                 "response"
             ],
-            "time": "2016-08-06T14:39:51+00:00"
+            "time": "2016-08-06 14:39:51"
         }
     ],
     "packages-dev": [],
