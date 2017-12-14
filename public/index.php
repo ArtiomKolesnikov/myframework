@@ -19,6 +19,9 @@ spl_autoload_register(function ($class){
     }
 });
 
+$dotenv = new \Dotenv\Dotenv(WWW);
+$dotenv->load();
+
 //Routes*****************
 
 Router::add('^page/(?P<action>[a-z-]+)/(?P<alias>[a-z-]+)$',['controller'=>'Page']);
