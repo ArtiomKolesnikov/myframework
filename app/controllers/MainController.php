@@ -1,16 +1,16 @@
 <?php
 namespace app\controllers;
 
+use app\models\Main;
+
 class MainController extends AppController
 {
     public function indexAction()
     {
-        $name = 'ArtKol';
-        $car = [
-            'mark' => 'Toyota',
-            'model' => 'Mark II'
-        ];
-        $this->with(compact('name','car'));
+        $model = new Main;
+        $posts = $model->findAll();
+//        dd($posts);
+        $this->with(compact('posts'));
     }
 
 }

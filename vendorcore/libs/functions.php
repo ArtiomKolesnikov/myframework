@@ -6,5 +6,6 @@ function d($arr)
 
 function dd($arr)
 {
-    die('<pre>'. print_r($arr,true) . '</pre>');
+    echo '<pre>'. print_r($arr,true) . '</pre>';
+    die();
 }

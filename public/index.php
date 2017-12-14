@@ -1,7 +1,12 @@
 <?php
 error_reporting(-1);
+
+ini_set('error_reporting', E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
 use vendorcore\core\Router;
-$query = rtrim($_SERVER['QUERY_STRING'],'/');
+$query = trim($_SERVER['REQUEST_URI'],'/');
+
 define('WWW',__DIR__);
 define('CORE', dirname(__DIR__) . '/vendorcore/core');
 define('ROOT',dirname(__DIR__));
@@ -19,8 +24,8 @@ spl_autoload_register(function ($class){
     }
 });
 
-$dotenv = new \Dotenv\Dotenv(WWW);
-$dotenv->load();
+//$dotenv = new Dotenv\Dotenv(__DIR__);
+//$dotenv->load();
 
 //Routes*****************
 

@@ -33,7 +33,10 @@ class View
 
     public function render($vars)
     {
-        extract($vars);
+        if(is_array($vars))
+        {
+            extract($vars);
+        }
         $file_view = APP . "/views/" . str_replace('Controller','',$this->route['controller'])
             . "/{$this->view}.php";
 

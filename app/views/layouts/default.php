@@ -11,5 +11,6 @@
 <body>
 <h1>Default layout</h1>
 <?= $content; ?>
+
 </body>
 </html>
