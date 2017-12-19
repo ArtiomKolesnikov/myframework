@@ -8,9 +8,10 @@ class MainController extends AppController
     public function indexAction()
     {
         $model = new Main;
-        $posts = $model->findAll();
-//        dd($posts);
-        $this->with(compact('posts'));
+//        $posts = $model->findAll();
+        $posts = \R::findAll('posts');
+        $menu = \R::findAll('category');
+        $this->with(compact('posts', 'menu'));
     }
 
 }

@@ -4,7 +4,7 @@ namespace vendorcore\core;
 
 use R;
 
-require 'rb-mysql.php';
+require LIBS . '/rb-mysql.php';
 
 
 class DB
@@ -17,7 +17,7 @@ class DB
 
     protected function __construct()
     {
-        $db = require APP . '/config/db.php';
+        $db = require CONFIG . '/db.php';
         $options = [
             \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION,
             \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC
@@ -29,21 +29,9 @@ class DB
         R::setup($db['dsn'],$db['user'],$db['password'],$options);
 
         //Заморозить структуру таблицы
-//        R::freeze(true);
-
-        //Создание таблицы category и запись в неё
-//        $category = R::dispense('category');
-//        $category->title = 'еда';
-//        $category->description = 'всё что лезет в рот...';
-//        R::store($category);
-
-        //Read
-        $category = R::load('category',1);
-        //Можно обращаться 2-мя способами
-//        dd($category->title);
-//        dd($category['title']);
-
-
+        R::freeze(true);
+        //Debug
+//        R::fancyDebug(true);
 
     }
 
