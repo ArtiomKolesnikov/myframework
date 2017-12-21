@@ -10,7 +10,7 @@ class MainController extends AppController
         $model = new Main;
 //        $posts = $model->findAll();
         $posts = \R::findAll('posts');
-        $menu = \R::findAll('category');
+        $menu = $this->menu;
         $this->with(compact('posts', 'menu'));
     }
 

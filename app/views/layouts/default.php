@@ -9,6 +9,13 @@
     <title>Главная</title>
 </head>
 <body>
+
+<ul class="nav nav-pills">
+    <?php foreach ($menu as $key => $item):?>
+        <li role="presentation" ><a href="#"><?= $item->title ;?></a></li>
+    <?php endforeach ;?>
+</ul>
+
 <h1>Default layout</h1>
 <?= $content; ?>
 

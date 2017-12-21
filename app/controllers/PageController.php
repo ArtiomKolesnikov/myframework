@@ -6,6 +6,7 @@ class PageController extends AppController
 {
     public function viewAction()
     {
-
+        $menu = $this->menu;
+        $this->with(compact('posts', 'menu'));
     }
 }
